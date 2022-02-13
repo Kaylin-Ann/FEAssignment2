@@ -1,0 +1,543 @@
+/*styling applied to whole document*/
+*{
+  box-sizing: border-box;
+  font-family: Roboto;  
+}
+#space{
+  padding:5px;
+}
+
+/*Container that the product is in*/
+#product{
+  width: 100%;
+  min-height:100vh;
+  padding-left:2%;
+  padding-right:2%;
+}
+
+/*Product Image*/
+#gallery{
+  float:left;
+}
+#prodimage {
+  width: 416px;
+  height: 416px;
+}
+#prodimage:hover{ 
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* CSS For The Modal - making image bigger when clicked on */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 5px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgb(255,255,255); 
+  background-color: rgba(255,255,255,0.4); 
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.modal-content, #ProdTitleModal {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ff6600;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: rgb(128, 8, 8);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*Product Information - Info Box Content*/
+#infoBox {
+  display: inline-block;
+  margin: 0 auto;
+  width: 600px;
+  text-align:left;
+  /*border: solid 1px;*/
+}
+
+.label1{
+  background-color: #FF6600;
+  background-image: linear-gradient(to right, #FF6600, #fa3b22f6);
+  border-radius: 2px 0 0 2px;
+  width: 100px;
+  height: 20px;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+  text-align:center;
+  padding:6px;
+  margin-right:-3px;
+}
+
+.label2, .label3{
+  background-image: url("images/icons8-ok.png");
+  background-repeat: no-repeat;
+  background-position: bottom 10px;
+  background-color: #fde8da;
+  border-radius: 0 2px 2px 0;
+  width: 106px;
+  height: 20px;
+  padding:6px;
+  padding-left:20px;
+  color: #FF6600;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#tag{
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  width: 111px;
+  height: 20px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+  padding:5px;
+}
+#tag:hover{
+  opacity: 0.6;
+}
+
+#ratings{
+  background: url("images/icons8-star_filled.png");
+  background-repeat: repeat-x;
+width: 64px;
+height: 20px;
+}
+#ratings:hover{
+  background: url("images/icons8-star_filled.png");
+  background-repeat: repeat-x;
+  opacity: 0.6;
+}
+
+.ratingAmount{
+  color: #FF6600;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.ReviewCount{
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.buyers{
+  color: #333333;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#amount{
+  padding:10px;
+  border-top: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9 ;
+}
+
+.price{
+  color: #FF6600;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+.price:hover{
+  color: #FF6600;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  text-decoration:underline;
+}
+
+.label5{
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+}
+
+#choseOpt{
+  color: #333333;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.oldPrice{
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  text-decoration: line-through;
+}
+
+#shippingInfo{
+  background-image:url("images/Logo.png"), url("images/icons8-forward.png");
+  background-position: left, right 20px bottom 15px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 76px 40px, auto;
+  background-color: #fde8da;
+  width: 100%;
+  height: 40px;
+  padding:10px;
+}
+#shippingInfo:hover{
+  background-image:url("images/Logo.png") no-repeat, url("images/icons8-forward.png") no-repeat ;
+  background-size: 76px 40px, 12px 16px;
+  cursor: pointer;
+}
+
+.shipInfotext{
+  color: #FF6600;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  padding:5px;
+  font-weight:bold;
+  margin-left:70px;
+}
+.shipInfotext:hover{
+  font-size:15px;
+  opacity: 0.7;
+}
+
+.shipInfotext1{
+  color: #FF6600;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  padding:5px;
+  font-weight:bold;
+  margin-left:70px;
+}
+.shipInfotext1:hover{
+  font-size:15px;
+  opacity: 0.7;
+}
+.disAmount{
+  color: #FF6600;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight:bold;
+}
+.disAmount:hover{
+  font-size:20px;
+  font-weight:bold;
+  color:green;
+}
+
+.disEnd{
+  background-image: url("images/icons8-clock.png");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right 190px bottom 1px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left:10px;
+}
+
+#countDown{
+  padding:25px;
+  font-size:18px;
+  line-height: 24px;
+  font-weight:bold;
+}
+#countDown:hover{
+  font-size:19px;
+  font-weight:bold;
+  color:red;
+  
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+.formIcon2{
+  width: 14px;
+  Height:14px;
+  margin-bottom:-10px;
+}
+
+.formIcon1{
+  width: 14px;
+  Height:2px;
+  margin-bottom:-5px;
+}
+
+form {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #increase {
+  margin-left: -4px;
+  border: 1px solid #FF6600;
+  border-radius: 0 2px 2px 0;
+  width: 50px;
+  height: 40px;
+  background-color: #ffffff;
+}
+
+form #decrease {
+margin-right: -4px;
+border: 1px solid #ddd;;
+  border-radius: 2px 0 0 2px;
+  width: 50px;
+  height: 40px;
+  background-color:rgb(250, 250, 250);
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  /*border: none;*/
+  border: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;
+  margin: 0px;*/
+  box-shadow: inset 0 1px 0 0 #E6E7EB, inset 0 -1px 0 0 #E6E7EB;
+  width: 80px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#PayExtraInfo{
+  background-image: url("images/icons8-security_lock.png");
+  background-repeat: no-repeat;
+  background-size: 12px 14px;
+}
+
+.lastText1 {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 15px;
+}
+.lastText1 span{
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight:bold;
+}
+
+.lastText{
+  background: url("images/icons8-visa.svg") no-repeat, url("images/icons8-mastercard.svg") no-repeat, url("images/icons8-apple_pay.svg") no-repeat;
+  background-size: 28px 12px;
+  background-position:left 50px bottom 35px, left 72px bottom 35px,left 100px bottom 35px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 16px; 
+}
+.lastText span{
+  padding-left:15px;
+}
+
+
+/*Right-hand side Information Box*/
+#addBox{
+  padding: 20px;
+  float:right;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 306px;
+  height: 256px;
+  -moz-box-shadow: 0 0 3px #c9c9c9;
+  -webkit-box-shadow: 0 0 3px #c9c9c9;
+  box-shadow: 0 0 3px #c9c9c9;
+  margin-right: 100px;
+}
+
+.shipBy{
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  text-align:left;
+  text-decoration:underline;
+}
+
+.finalPrice{
+  color: #333333;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  margin-top:-30px;
+}
+
+.addBoxText{
+  background-image: url("images/icons8-info.png");
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: left 155px bottom 2px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#LtP{
+  background-color: #FF6600;
+  border: 1px solid #FF6600;
+  border-radius: 20px;
+  width: 258px;
+  height: 40px;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+#LtP:hover{
+  padding:10px;
+  background-color: #ffffff;
+  border: 1px solid #FF6600;
+  color: #FF6600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#CtS{
+  background-image:url("images/icons8-envelope.png");
+  background-repeat: no-repeat;
+  background-size: 14px 12px;
+  background-position: left 45px bottom 12px;
+  background-color: #ffffff;
+  border: 1px solid #FF6600;
+  border-radius: 20px;
+  width: 258px;
+  height: 40px;
+  color: #FF6600;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  padding:5px;
+}
+#CtS:hover{
+  padding:10px;
+  background-color: #fde8da;
+  border: 1px solid #FFffff;
+  color: #FF6600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+/*Responsive Design*/
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 1320px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+/*Responsive Design*/
+@media screen and (min-device-width: 360px) and (max-device-width: 1320px){
+  #product, #gallery, #infoBox, #addBox{
+    width:100%;
+    margin:auto;
+  }
+  #prodimage{
+    width:100%;
+  }
+  table, tr{
+    width:100%;
+    
+  }
+  form #increase{
+    width: 30px;
+  }
+  form #decrease{
+    width: 30px;
+  }
+  form input#number{
+    width:35px;
+  }
+ .shipInfotext1{
+   display:none;
+ }
+}

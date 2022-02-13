@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+        <title>Single Product Detail Page</title>
+        
+        <!--Link to CSS Styling-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+<!--Creating a container #product that will hold all the product information-->
+<div id="product">
+
+    <!--Product Image-->
+    <div id="gallery">
+        <img src="images/Image.jpg" alt="Product image" id="prodimage" />
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img1">
+       
+    </div>
+
+    <!--Product Details-->
+    <div id="infoBox">
+        <!--creating the labels-->
+        <label class="label1"> Ready to Ship</label>
+        <label class="label2">In Stock </label> 
+        <label class="label3"> Fast Dispatch</label>
+
+        <!--Product Title-->
+        <div id="prodTitle">
+            <h2>
+                title <label id="tag">Hot Sale products</label>
+            </h2>
+        </div>
+        <h2 id="prodTitle"></h2>
+
+        <!--Reviews-->
+        <div id="ratings">
+           <!--<label class="ratingAmount"> Rating</label>
+            <label class="ReviewCount">Countreviews</label>
+            <label class="buyers">N0buyers</label>-->
+        </div>
+
+        <div id="space"></div>
+
+        <!--Prices/options chosen-->
+        <div id="amount">
+            <label class="price">cur.price - cur.price</label> 
+            <label class="label5">/ Option </label>
+            <lable id="choseOpt"> 2options</label> 
+            <label class="label5">(Min.Order)</label>
+            <br>
+            <!--old prices-->
+            <label class="oldPrice">cur.old price - cur.old price</label>
+        </div>
+
+        <div id="space"></div>
+
+        <!--Shipping Information-->
+        <div id="shippingInfo">  
+            <label class="shipInfotext">• Free shipping (up to $40)</label>
+            <label class="shipInfotext1">• On-time delivery guaranteed</label>
+        </div>
+
+
+        <div id="space"></div>
+
+        <!--Discount Information-->
+        <div id="Discount">
+            <label class="disAmount"> disAmount OFF </label>
+            <label class="disEnd">Discount ends in: <span id="countDown">discountCountDown</span>  </label>
+        </div>
+
+        <div id="space"></div>
+
+        <!--Available Options-->
+        <div id="ProdOptions">
+            <table style="width:100%">
+                <tr>
+                    <th></th>
+                  <td>1080p</td>
+                  <td>Price</td>
+                  <!--QTY Form-->
+                  <td> 
+                      <form>
+                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease QTY Value">
+                            <img src="images/icons8-minus.png" alt="Minus Icon" class="formIcon1">
+                        </div>
+                        <input type="number" id="number" value="0"/>
+                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase QTY Button">
+                            <img src="images/icons8-plus_math.png" alt="Minus Plus" class="formIcon2">
+                        </div>
+                      </form>
+                  </td>
+                </tr>
+                <tr>
+                    <th></th>
+                  <td>4K</td>
+                  <td>Price</td>
+                  <td>
+                    <form>
+                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease QTY Value">
+                            <img src="images/icons8-minus.png" alt="Minus Icon" class="formIcon1">
+                        </div>
+                        <input type="number" id="number" value="0"/>
+                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase QTY Button">
+                            <img src="images/icons8-plus_math.png" alt="Minus Plus" class="formIcon2">
+                        </div>
+                      </form>
+                  </td>
+                </tr>
+                <tr>
+                <th></th>
+                  <td>Battery (accessories)</td>
+                  <td>Price</td>
+                  <td> 
+                    <form>
+                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease QTY Value">
+                            <img src="images/icons8-minus.png" alt="Minus Icon" class="formIcon1">
+                        </div>
+                        <input type="number" id="number" value="0"/>
+                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase QTY Button">
+                            <img src="images/icons8-plus_math.png" alt="Minus Plus" class="formIcon2">
+                        </div>
+                    </form>
+                  </td>
+                </tr>
+              </table>
+        </div>
+
+        <div id="space"></div>
+
+        <div id="PayExtraInfo">
+            <label class="lastText1"> <span>Trade Assurance </span> protects your Alibaba.com orders</label>
+            <p class="lastText">
+                Payments: 
+                <br><br>
+                Alibaba.com Logistics <span> Inspection Solutions</span>
+            </p>
+        </div>
+    </div>
+
+    <!--Box on the side-->
+    <div id="addBox">
+        <div class="shipBy">
+            Ship to [country] <br> by [title]
+        </div>
+        <div class="finalPrice">
+            cur.[method/cost]
+        </div>
+        <p class="addBoxText">Lead Time [value-days] </p>
+        <p class="addBoxText">Shipping time [value-days] </p>
+        <button id="LtP">Login to Purchase</button> <div id="space"></div>
+        <button id="CtS"> Contact the Supplier</button>
+    </div>
+</div>
+
+<!--Linking the JavaScript-->
+<script src="scripts.js"></script>
+
+
+
+
+    </body>
+</html>
