@@ -1,29 +1,3 @@
-/*
-fetch('https://fe-assignment.vaimo.net/').then((data)=>{
-  //console.log(data);
-  return data.json();
-}).then((completedata) => {
-
-  /*console.log(completedata.product.discount.amount);
-  
-
-  var data1="";
-  completedata.map((values)=>{
-    data1=`
-    
-    <label class="ratingAmount"> ${values.product.reviews.rating}</label>
-    <label class="ReviewCount">Count reviews</label>
-    <label class="buyers">Number of buyers</label>
-    `
-  });
-  document.getElementById("ratings").innerHTML=data1;
-
-}).catch((err)=>{
-  console.log(err);
-})*/
-
-
-
 fetch('https://fe-assignment.vaimo.net/')
 .then((data)=>{
 
